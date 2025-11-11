@@ -1,6 +1,14 @@
 import Card from '../Card/Card'
 import styles from './Intro.module.css'
 
+/**
+ * A component that displays the introductory section of the homepage.
+ *
+ * This section includes a set of feature highlights and a grid of popular
+ * event cards. It currently displays 6 hardcoded event cards.
+ *
+ * @returns {JSX.Element} The rendered intro component.
+ */
 const Intro = () => {
   return (
     <div className={styles.intro}>
@@ -12,30 +20,30 @@ const Intro = () => {
         </div>
 
         <div>
-        <i className="fa-solid fa-cart-shopping"></i>
+          <i className="fa-solid fa-cart-shopping"></i>
           <h2>Buy directly from organizers</h2>
           <span>Pay online in easy steps</span>
         </div>
 
         <div>
-        <i className="fa-solid fa-ticket"></i>
+          <i className="fa-solid fa-ticket"></i>
           <h2>Get ticketz!</h2>
           <span>Sent to your email</span>
         </div>
       </div>
       <div className={styles.heading}>
-      <h2>Popular Events in <span>Abuja</span></h2>
-      <h3>Filter by Category</h3>
+        <h2>Popular Events in <span>Abuja</span></h2>
+        <h3>Filter by Category</h3>
       </div>
 
 
-        <div className={styles.events}>
-            {
-                [...Array(6)].map((x,i) =>  ( 
-                    <Card key={i} />
-                ))
-            }
-        </div>
+      <div className={styles.events}>
+        {
+          [...Array(6)].map((x, i) => (
+            <Card key={i} />
+          ))
+        }
+      </div>
     </div>
   )
 }
