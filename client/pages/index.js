@@ -9,6 +9,14 @@ import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
+/**
+ * The main homepage component.
+ *
+ * This component renders the main page of the application, which includes
+ * the Hero and Intro sections. It also sets the page title and meta tags.
+ *
+ * @returns {JSX.Element} The rendered homepage component.
+ */
 export default function Home() {
   return (
     <>
@@ -19,8 +27,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-          <Hero />
-          <Intro />
+        <Hero />
+        <Intro />
       </main>
       <Script src='https://kit.fontawesome.com/4ef8c63dd7.js' />
     </>
